@@ -1,0 +1,20 @@
+Things that are needed:
+
+Users
+    Game Collection
+    Score tracker
+
+Games
+    Categories
+    BoardGameGeek(Api in Beta)
+
+Scores
+    High Scores
+    Wins
+    Losses
+
+    User should be able to look at a list of their games. 
+    User should be able to add edit and delete games.
+    User should be able to add score to games played.
+    
+
