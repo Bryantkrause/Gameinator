@@ -13,10 +13,10 @@
 // })
 
 // module.exports = sequelize
-
+mysql://root:password@localhost/db1
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("db1", "root", "password", {
+const sequelize = new Sequelize('mysql://root:password@localhost/db1', {
 	dialect: "mysql",
 });
 
