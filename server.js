@@ -15,7 +15,7 @@ require("./routes")(app);
 
 // bread and butter brings everything together
 db.sync()
-	.then(() => app.listen(process.env.PORT || 3000))
+	.then(() => app.listen( 3000))
 	.catch((e) => console.log(e));
 
 
