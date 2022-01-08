@@ -24,6 +24,10 @@
     "express": "^4.17.2",
     "if-env": "^1.0.4",
     "mysql2": "^2.3.3",
+    "pg": "^8.7.1",
     "sequelize": "^7.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^3.0.0"
   }
 }

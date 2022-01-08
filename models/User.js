@@ -13,7 +13,7 @@
 // };
 
 const Sequelize = require("sequelize")
-const sequelize = require("../connection")
+const sequelize = require("../config")
 
 const User = sequelize.define("User", {
 	id: {
