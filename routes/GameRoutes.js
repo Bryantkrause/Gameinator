@@ -9,7 +9,7 @@ module.exports = (app) => {
 
 	app.post("/games", (req, res) => {
 		Game.create(req.body)
-			.then(() => res.sendStates(200))
+			.then(() => res.sendStatus(200))
 			.catch((e) => console.error(e));
 	});
 
