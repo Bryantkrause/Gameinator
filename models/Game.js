@@ -1,33 +1,40 @@
 const Sequelize = require("sequelize");
+
 const sequelize = require("../config");
-
-
-// const Game = sequelize.define("order", {
-// 	id: {
-// 		type: Sequelize.INTEGER,
-// 		autoIncrement: true,
-// 		allowNull: false,
-// 		primaryKey: true,
-// 	},
-// 	name: {
-// 		type: Sequelize.STRING,
-// 		allowNull: false,
-// 	},
-// });
-
+const User = require("./User");
 
 
 module.exports = (sequelize, Model, DataTypes) => {
 	class Game extends Model {}
-
+	
 	Game.init(
 		{
-			Name: DataTypes.STRING,
-			Players: DataTypes.STRING,
-			Type: DataTypes.STRING,
+			id: {
+				type: DataTypes.UUID,
+				defaultValue: DataTypes.UUIDV4,
+				primaryKey: true,
+			},
+			Name: {
+				type: DataTypes.STRING,
+				allowNull: false,
+				defaultValue: "Uno",
+			},
+			Players: {
+				type: DataTypes.Number,
+				allowNull: false,
+				defaultValue: 1,
+			},
+			Type: {
+				type: DataTypes.STRING,
+				allowNull: false,
+				defaultValue: "Card",
+			},
 		},
 		{ sequelize, modelName: "game" }
+
+
 	);
 
 	return Game;
 };
+

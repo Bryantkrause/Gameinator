@@ -1,9 +1,11 @@
 
 const Sequelize = require("sequelize")
+const { Game } = require("./Game")
 const sequelize = require("../config")
 
 module.exports = (sequelize, Model, DataTypes) => {
 	class User extends Model { }
+	
 	User.init({
 		id: {
 			type: Sequelize.INTEGER,
@@ -21,6 +23,9 @@ module.exports = (sequelize, Model, DataTypes) => {
 		}
 	},
 		{sequelize, modelName: "user"}
-		)
+	)
+	
 return User
-	}
+}
+	
+
